@@ -1,0 +1,41 @@
+baseURL = "https://clowneau.com/"
+languageCode = "en-au"
+title = "clowneau"
+theme = "fraktur"
+
+[params]
+  showIntroContentOnHomepage = true
+  showPostsOnHomepage = false
+  enableGoogleFonts = true
+  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=UnifrakturCook:wght@700&display=swap"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "listening"
+    name = "Listening"
+    url = "/pages/listening/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/pages/projects/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "info"
+    name = "Info"
+    url = "/pages/info/"
+    weight = 5

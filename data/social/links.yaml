@@ -1,0 +1,6 @@
+- name: Codeberg
+  url: https://codeberg.org/clowneau
+- name: Mastodon
+  url: https://your.mastodon.url
+- name: RSS
+  url: /index.xml
