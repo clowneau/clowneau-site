@@ -22,11 +22,13 @@ jobs:
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.PAGES_TOKEN }}
-          external_repository: clowneau/clowneau-site
-          publish_branch: pages
-          publish_dir: ./public
-          cname: clowneau.com
+      - name: Deploy to pages branch
+        run: |
+          cd public
+          git init
+          git config user.email "ci@clowneau.com"
+          git config user.name "CI"
+          echo "clowneau.com" > .domains
+          git add .
+          git commit -m "deploy"
+          git push -f https://clowneau:${{ secrets.PAGES_TOKEN }}@codeberg.org/clowneau/clowneau-site.git HEAD:pages
