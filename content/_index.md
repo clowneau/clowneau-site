@@ -2,4 +2,4 @@
 title: "clowneau"
 description: "writing about things"
 ---
-test test this is a test
+Writing about Linux, self-hosting, music, and whatever else I'm tinkering with. Based in Melbourne/Naarm.
