@@ -1,0 +1,43 @@
+{{ define "body_classes" }}page-listening-list{{ end }}
+
+{{ define "main" }}
+  <div class="intro">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </div>
+
+  {{ range .RegularPages.ByDate.Reverse }}
+    {{ $album := . }}
+
+    <div class="summary">
+      <div class="summary-date">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </div>
+
+      <div class="album-summary" style="display: flex; align-items: flex-start; gap: 16px;">
+
+        {{ with .Params.cover }}
+          <a href="{{ $album.RelPermalink }}">
+            <img
+              src="{{ . | relURL }}"
+              alt="Cover art for {{ $album.Title }}"
+              width="80"
+              style="display: block; width: 100px; height: 100px; object-fit: cover;"
+            />
+          </a>
+        {{ end }}
+
+        <div>
+          <h2 class="summary-title">
+            <a href="{{ $album.RelPermalink }}">{{ $album.Title }}</a>
+          </h2>
+
+          <p class="summary-description">
+            {{ $album.Params.artist }} · {{ $album.Params.year }} · {{ $album.Params.label }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,25 @@
+{{ define "body_classes" }}page-listening-single{{ end }}
+
+{{ define "main" }}
+  <article class="album-review">
+    <div class="intro">
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Params.artist }} · {{ .Params.year }} · {{ .Params.label }}</p>
+      {{ with .Params.cover }}
+        <img src="{{ . | relURL }}" alt="Album cover" />
+      {{ end }}
+    </div>
+
+
+
+    <div class="content">
+      {{ .Content }}
+    </div>
+
+    <div class="album-details">
+      <p>Rating: {{ .Params.rating }}/10</p>
+      <p>Reviewed: {{ .Date.Format "2 January 2006" }}</p>
+    </div>
+
+  </article>
+{{ end }}

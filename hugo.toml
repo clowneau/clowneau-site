@@ -25,7 +25,7 @@ theme = "fraktur"
   [[menu.main]]
     identifier = "listening"
     name = "Listening"
-    url = "/pages/listening/"
+    url = "/listening/"
     weight = 3
 
   [[menu.main]]
