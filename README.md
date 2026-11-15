@@ -53,5 +53,3 @@ Live website: https://clowneau.com/
 - Images go in `static/images/`.
 - Blog posts go in `content/posts/`.
 - Album reviews go in `content/listening/`.
-- Templates go in `layouts/`.
-- Archetypes go in `archetypes/`.
